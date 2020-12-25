@@ -1,9 +1,9 @@
 {
-	"name": "morris/lessql",
+	"name": "bcostea/lessql",
 	"description": "LessQL: A lightweight and performant PHP ORM alternative",
 	"keywords": ["orm", "notorm", "sql", "pdo", "database"],
 	"license": "MIT",
-	"homepage": "https://github.com/morris/lessql",
+	"homepage": "https://github.com/bcostea/lessql",
 	"authors": [
 		{
 			"name": "Morris Brodersen",
