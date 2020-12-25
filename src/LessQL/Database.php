@@ -371,7 +371,7 @@ class Database
 
         $table = $this->rewriteTable($table);
 
-        return $table . '_' . '_seq';
+        return $table . '_' . 'seq';
     }
 
     /**
