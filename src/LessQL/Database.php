@@ -358,7 +358,7 @@ class Database
     /**
      * Get primary sequence name of table (used in INSERT by Postgres)
      *
-     * Conventions is "$tableRewritten_$primary_seq"
+     * Conventions is "$tableRewritten_seq"
      *
      * @param string $table
      * @return null|string
@@ -369,15 +369,9 @@ class Database
             return $this->sequences[$table];
         }
 
-        $primary = $this->getPrimary($table);
-
-        if (is_array($primary)) {
-            return null;
-        }
-
         $table = $this->rewriteTable($table);
 
-        return $table . '_' . $primary . '_seq';
+        return $table . '_' . '_seq';
     }
 
     /**
