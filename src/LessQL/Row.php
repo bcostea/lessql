@@ -25,6 +25,18 @@ class Row implements \ArrayAccess, \IteratorAggregate, \JsonSerializable
         $this->setData($properties);
     }
 
+
+    /**
+     * Get column names for a row
+     *
+     * @return array<string>
+     */
+    public function getPropertyNames()
+    {
+        return array_keys($this->_properties);
+    }
+
+
     /**
      * Get a property
      *
@@ -376,7 +388,7 @@ class Row implements \ArrayAccess, \IteratorAggregate, \JsonSerializable
                 $key = $db->getBackReference($this->getTable(), $column);
 
                 foreach ($value as $row) {
-                    $row->{ $key } = $id;
+                    $row->{$key} = $id;
                 }
             }
         }
